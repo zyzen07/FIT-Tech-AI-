@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" data-bs-theme="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Tech-AI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body data-spy="scroll" data-target="#navbarNavContent" data-offset="70">
+    <nav class="navbar navbar-expand-lg navbar-emphasis bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Fit Tech-AI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link " href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#statistics">Stats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home">
+        <img src="images/cover-image.jpg" alt=" Cover Image" class="cover-image">
+        <div class="home-content text-center">
+            <h1>Welcome to Fit Tech-AI Website</h1>
+            <p>Your journey to better health</p>
+            <a href="#services" class="btn btn-primary mt-3">Starts Here</a>
+        </div>
+    </section>
+    
+    
+                <div class="carousel-controls">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <section id="statistics" class="container py-5 text-center section-animate">
+        <h2 class="mb-4 text-white">Awareness Statistics</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="statistic">
+                    <h3 id="obesityCount">0</h3>
+                    <p>Million Obesity Patients</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="statistic">
+                    <h3 id="unhealthyCount">0</h3>
+                    <p>Million Unhealthy People</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="statistic">
+                    <h3 id="healthTipsCount">0</h3>
+                    <p>Health Tips Shared</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Chatbot Icon -->
+<div class="chatbot-icon" onclick="toggleChatbot()">
+    💬
+</div>
+
+<!-- Chatbot Window -->
+<div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+        <h5>Health Assistant Bot</h5>
+        <button class="close-btn" onclick="toggleChatbot()">✖</button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="bot-message">Hello! How can I assist you today?</div>
+    </div>
+    <div class="chatbot-input">
+        <input type="text" id="userInput" placeholder="Type your message..." onkeydown="handleUserMessage(event)">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+
+    <section id="services" class="container py-5 section-animate">
+        <h2 class="text-center text-white">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://plus.unsplash.com/premium_photo-1669056783477-9bfeea3f696c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGRpZXQlMjBwbGFufGVufDB8fDB8fHww/300x200" class="card-img-top" alt="Diet Plans">
+                    <div class="card-body">
+                        <h5 class="card-title">Diet Plans</h5>
+                        <p class="card-text">Personalized diet plans to meet your health goals.</p>
+                        <a href="diet.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://images.pexels.com/photos/8155159/pexels-photo-8155159.jpeg?auto=compress&cs=tinysrgb&w=800/300x200" class="card-img-top" alt="Fitness Tips">
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness Tips</h5>
+                        <p class="card-text">Expert fitness tips to keep you active and healthy.</p>
+                        <a href="fitness.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://images.pexels.com/photos/8965150/pexels-photo-8965150.jpeg?auto=compress&cs=tinysrgb&w=800/300x200" class="card-img-top" alt="Consultations">
+                    <div class="card-body">
+                        <h5 class="card-title">Health Consultations</h5>
+                        <p class="card-text">Get professional advice tailored to your needs.</p>
+                        <a href="services.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container py-5 section-animate">
+        <h2 class="text-center text-white">About Us</h2>
+        <p class="text-center">Welcome to Fit-Tech AI, where we're transforming personal fitness through the power of artificial intelligence. Our mission is to empower individuals to take control of their fitness journeys with personalized insights, practical guidance, and data-driven support. Created as part of an innovative hackathon project, Fit-Tech AI leverages cutting-edge AI to deliver accessible, reliable, and intuitive health recommendations.
+        </p>
+        <h3 class="text-center">Our Mission</h3>
+        <p class="text-center">Through Fit-Tech AI, we aim to provide real-time suggestions on fitness routines, diet tips, and mental well-being practices. Our solution prioritizes natural, balanced approaches, recommending simple lifestyle changes to help users reach their fitness goals. By addressing both everyday health queries and providing personalized fitness advice, Fit-Tech AI strives to be a supportive digital coach.
+
+            Our vision is to make AI an ally in fitness, offering advice that’s as human as it is high-tech, focusing on natural foods, holistic exercise, and wellness.</p>
+        
+
+    <section id="contact" class="container py-5 section-animate">
+        <h2 class="text-center text-white">Contact Us</h2>
+        <div class="card p-4 mx-auto" style="max-width: 500px; background-color: rgba(255, 255, 255, 0.1);">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="glowing-section text-center section-animate">
+        <div id="glowing-text" class="glowing-text">
+            Obesity is a serious health concern!
+        </div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
+<footer class="bg-dark-expand-lg text-white text-center py-4 w-100">
+    <p>&copy; 2024 Fit Tech-AI. All rights reserved.</p>
+</footer>
+</html>
